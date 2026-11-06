@@ -1,0 +1,246 @@
+:root {
+  --brown: #7b5b3f;
+  --brown-dark: #4a3626;
+  --gold: #b58e68;
+  --beige: #fdf0e3;
+  --white: #ffffff;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--brown-dark);
+  line-height: 1.6;
+  background: var(--white);
+}
+
+/* Верхнее меню */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: var(--brown);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 22px;
+  padding: 16px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+}
+
+.navbar a {
+  color: var(--white);
+  text-decoration: none;
+  font-size: 14px;
+  letter-spacing: 1px;
+  padding-bottom: 3px;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.2s;
+}
+
+.navbar a:hover { border-bottom-color: var(--gold); }
+
+/* Разделы */
+section {
+  padding: 70px 20px;
+  text-align: center;
+}
+
+.beige { background: var(--beige); }
+
+h1 { font-size: 48px; color: var(--white); margin: 0 0 10px; }
+
+h2 {
+  font-size: 28px;
+  color: var(--brown);
+  letter-spacing: 1px;
+  margin: 0 0 30px;
+}
+
+h2::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 3px;
+  background: var(--gold);
+  margin: 12px auto 0;
+}
+
+/* Главный экран */
+.home {
+  background: linear-gradient(135deg, #d19a6a 0%, #8a5c3b 50%, #3b2619 100%);
+  color: var(--white);
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.avatar {
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center top;
+  border: 5px solid rgba(255, 255, 255, 0.85);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+  margin-bottom: 22px;
+}
+
+.home p { max-width: 600px; margin: 0 auto 25px; font-size: 16px; }
+
+.button {
+  display: inline-block;
+  background: var(--gold);
+  color: var(--white);
+  text-decoration: none;
+  padding: 13px 34px;
+  border-radius: 30px;
+  font-weight: bold;
+  border: none;
+  font-size: 15px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: transform 0.15s, background 0.2s;
+}
+
+.button:hover {
+  background: var(--brown);
+  transform: translateY(-2px);
+}
+
+/* Навыки — карточки */
+.skills-grid {
+  max-width: 800px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+  text-align: left;
+}
+
+.skill-card {
+  background: var(--white);
+  border-radius: 12px;
+  padding: 18px 20px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+  border-left: 4px solid var(--gold);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.skill-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.skill-card strong { display: block; color: var(--brown); font-size: 16px; }
+.skill-card span { font-size: 13px; color: var(--gold); font-weight: bold; }
+
+/* Контакты */
+.contacts-box {
+  max-width: 500px;
+  margin: 0 auto;
+  background: var(--white);
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+}
+
+.contacts-box p { margin: 12px 0; font-size: 16px; }
+.contacts-box a { color: var(--brown); font-weight: bold; }
+
+/* Оценка (ползунок) */
+.rating-box {
+  max-width: 420px;
+  margin: 0 auto;
+  background: var(--white);
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+}
+
+.rating-box p { margin: 0 0 16px; }
+
+.rating-value {
+  font-size: 48px;
+  font-weight: bold;
+  color: var(--gold);
+  margin: 0;
+}
+
+input[type="range"] {
+  width: 100%;
+  accent-color: var(--brown);
+  cursor: pointer;
+}
+
+.scale {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  color: var(--brown);
+  margin-top: 6px;
+}
+
+/* Форма */
+form {
+  max-width: 420px;
+  margin: 0 auto;
+  text-align: left;
+  background: var(--white);
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  color: var(--brown);
+  margin: 14px 0 6px;
+}
+
+input[type="text"],
+input[type="tel"] {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid var(--gold);
+  border-radius: 8px;
+  font-size: 16px;
+  font-family: inherit;
+}
+
+input:focus {
+  outline: 2px solid var(--gold);
+  border-color: transparent;
+}
+
+form .button {
+  display: block;
+  width: 100%;
+  margin-top: 22px;
+}
+
+#thanks {
+  margin-top: 20px;
+  color: var(--brown);
+  font-weight: bold;
+  min-height: 24px;
+}
+
+.footer {
+  background: var(--gold);
+  color: var(--white);
+  text-align: center;
+  padding: 16px;
+  font-size: 14px;
+}
+
+@media (max-width: 600px) {
+  h1 { font-size: 36px; }
+  section { padding: 50px 16px; }
+  .avatar { width: 140px; height: 140px; }
+}

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nurbol — Портфолио</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Меню -->
+  <div class="navbar">
+    <a href="#home">HOME</a>
+    <a href="#skills">SKILLS</a>
+    <a href="#contacts">CONTACTS</a>
+    <a href="#rating">RATE</a>
+    <a href="#form">WRITE TO ME</a>
+  </div>
+
+  <!-- HOME -->
+  <section class="home" id="home">
+    <img class="avatar" src="photo.jpg" alt="Фото Нурбола">
+    <h1>Nurbol</h1>
+    <p>IT Student | Aspiring Software Developer</p>
+    <p>Студент Ala-Too College. Учусь программированию и хочу стать профессиональным Software Developer.</p>
+    <a href="#form" class="button">Написать мне</a>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="beige" id="skills">
+    <h2>SKILLS</h2>
+    <div class="skills-grid">
+      <div class="skill-card"><strong>Java</strong><span>Beginner</span></div>
+      <div class="skill-card"><strong>Kotlin</strong><span>Beginner</span></div>
+      <div class="skill-card"><strong>Python</strong><span>Beginner</span></div>
+      <div class="skill-card"><strong>SQL / PostgreSQL</strong><span>Beginner</span></div>
+      <div class="skill-card"><strong>HTML</strong><span>Beginner</span></div>
+      <div class="skill-card"><strong>CSS</strong><span>Beginner</span></div>
+      <div class="skill-card"><strong>Git / GitHub</strong><span>Basic</span></div>
+      <div class="skill-card"><strong>Android Studio</strong><span>Basic</span></div>
+      <div class="skill-card"><strong>IntelliJ IDEA</strong><span>Basic</span></div>
+      <div class="skill-card"><strong>Visual Studio Code</strong><span>Basic</span></div>
+    </div>
+  </section>
+
+  <!-- CONTACTS -->
+  <section id="contacts">
+    <h2>CONTACTS</h2>
+    <div class="contacts-box">
+      <p>Email: <a href="mailto:n8900664@gmail.com">n8900664@gmail.com</a></p>
+      <p>GitHub: <a href="https://github.com/bnl" target="_blank" rel="noopener">github.com/bnl</a></p>
+      <p>Location: Bishkek, Kyrgyzstan</p>
+    </div>
+  </section>
+
+  <!-- ОЦЕНКА: ползунок -->
+  <section class="beige" id="rating">
+    <h2>RATE THIS PORTFOLIO</h2>
+    <div class="rating-box">
+      <p>Передвиньте ползунок, чтобы оценить сайт от 1 до 10:</p>
+      <p class="rating-value" id="rating-value">5</p>
+      <input type="range" id="rating-slider" min="1" max="10" value="5">
+      <div class="scale"><span>1</span><span>10</span></div>
+    </div>
+  </section>
+
+  <!-- ФОРМА: имя и номер -->
+  <section id="form">
+    <h2>WRITE TO ME</h2>
+    <form id="contact-form">
+      <label for="name">Имя</label>
+      <input id="name" type="text" placeholder="Ваше имя" required>
+
+      <label for="phone">Номер телефона</label>
+      <input id="phone" type="tel" placeholder="+996 ..." required>
+
+      <button type="submit" class="button">Отправить</button>
+      <p id="thanks"></p>
+    </form>
+  </section>
+
+  <div class="footer">2026 | Nurbol. Все права защищены.</div>
+
+  <script src="script.js"></script>
+</body>
+</html>
